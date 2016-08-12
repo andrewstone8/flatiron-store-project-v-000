@@ -13,3 +13,8 @@ Item.all.each do |item|
   item.save
   counter += 1
 end
+
+3.times do
+  name = Faker::Name.first_name
+  User.create(email: name + '@example.com', password: 'password')
+end
